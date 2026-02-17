@@ -195,16 +195,6 @@ Quito - Ecuador / Cumbá
 
 ---
 
-## 📚 Referencias
-
-| Nombre | Cargo | Contacto |
-|--------|-------|----------|
-| Enrique Buitron | Analista de Soporte - Puntonet | enrique.buitron@puntonet.ec / 0991583632 |
-| Eduardo Torres | Gerente de Auditoría - Petróleos & Servicios | 0999069356 |
-| Diego Serrano | Docente de Grado y Posgrado - USFQ y PUCE | 0988159108 |
-| Marco Guevara | Desarrollador Senior - Universidad del Pacífico | 0995178173 |
-
----
 
 ## 📫 Contacto
 
