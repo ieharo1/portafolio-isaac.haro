@@ -8,7 +8,7 @@ Me considero una persona con sólidas aptitudes, comprometida con la excelencia 
 
 ## 📍 Ubicación
 
-Quito - Ecuador / Cumbaya
+Quito - Ecuador / Cumbayá
 
 ---
 
