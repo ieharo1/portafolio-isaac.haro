@@ -9,1536 +9,13 @@
         content="Portafolio profesional de Isaac Haro - Ingeniero en Sistemas especializado en desarrollo Full Stack, DevOps, automatización y Big Data">
     <meta name="keywords"
         content="Desarrollador Full Stack, DevOps, Python, Django, Laravel, React, Angular, SQL Server, MongoDB, Linux, Docker, n8n, Automatización">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary: #6366f1;
-            --primary-dark: #4f46e5;
-            --secondary: #ec4899;
-            --accent: #10b981;
-            --warning: #f59e0b;
-            --dark: #0f172a;
-            --darker: #020617;
-            --light: #f8fafc;
-            --gray: #64748b;
-            --card-bg: rgba(30, 41, 59, 0.7);
-            --card-hover: rgba(51, 65, 85, 0.9);
-            --gradient-1: linear-gradient(135deg, #6366f1, #8b5cf6, #ec4899);
-            --gradient-2: linear-gradient(135deg, #10b981, #3b82f6);
-            --gradient-3: linear-gradient(135deg, #f59e0b, #ef4444);
-        }
-
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 80px;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: var(--darker);
-            color: var(--light);
-            line-height: 1.6;
-            overflow-x: hidden;
-            position: relative;
-        }
-
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background:
-                radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.08) 0%, transparent 30%),
-                radial-gradient(circle at 90% 80%, rgba(236, 72, 153, 0.08) 0%, transparent 30%),
-                radial-gradient(circle at 40% 40%, rgba(16, 185, 129, 0.05) 0%, transparent 40%);
-            z-index: -2;
-        }
-
-        /* Header Moderno */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(15, 23, 42, 0.95);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(99, 102, 241, 0.2);
-            z-index: 1000;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        header.scrolled {
-            background: rgba(15, 23, 42, 0.98);
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
-            padding: 0.5rem 0;
-        }
-
-        nav {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 1.5rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: all 0.3s ease;
-        }
-
-        .logo {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.8rem;
-            font-weight: 800;
-            background: var(--gradient-1);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            letter-spacing: -0.5px;
-            position: relative;
-        }
-
-        .logo::after {
-            content: 'DevOps Engineer';
-            position: absolute;
-            bottom: -8px;
-            left: 0;
-            font-size: 0.6rem;
-            font-weight: 600;
-            background: var(--gradient-2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            letter-spacing: 1px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2.5rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--light);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: all 0.3s ease;
-            position: relative;
-            padding: 0.5rem 0;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--gradient-1);
-            transition: width 0.4s ease;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        .nav-links a.active {
-            color: var(--primary);
-        }
-
-        .nav-links a.active::after {
-            width: 100%;
-        }
-
-        /* Hero Section Ultra Premium */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-            padding: 8rem 2rem 4rem;
-        }
-
-        .hero-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background:
-                radial-gradient(circle at 15% 30%, rgba(99, 102, 241, 0.15) 0%, transparent 40%),
-                radial-gradient(circle at 85% 70%, rgba(236, 72, 153, 0.15) 0%, transparent 40%),
-                radial-gradient(circle at 35% 15%, rgba(16, 185, 129, 0.1) 0%, transparent 35%);
-            animation: float 25s ease-in-out infinite;
-        }
-
-        @keyframes float {
-
-            0%,
-            100% {
-                transform: translate(0, 0) scale(1) rotate(0deg);
-            }
-
-            33% {
-                transform: translate(40px, -40px) scale(1.1) rotate(2deg);
-            }
-
-            66% {
-                transform: translate(-30px, 30px) scale(0.95) rotate(-2deg);
-            }
-        }
-
-        .hero-content {
-            max-width: 1400px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 6rem;
-            align-items: center;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero-text h1 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 4rem;
-            font-weight: 800;
-            margin-bottom: 1.5rem;
-            line-height: 1.1;
-            letter-spacing: -1px;
-        }
-
-        .gradient-text {
-            background: var(--gradient-1);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            background-size: 200% 200%;
-            animation: gradient-shift 6s ease infinite;
-        }
-
-        @keyframes gradient-shift {
-
-            0%,
-            100% {
-                background-position: 0% 50%;
-            }
-
-            50% {
-                background-position: 100% 50%;
-            }
-        }
-
-        .hero-text .subtitle {
-            font-size: 1.8rem;
-            color: var(--gray);
-            margin-bottom: 2rem;
-            font-weight: 300;
-            position: relative;
-            display: inline-block;
-        }
-
-        .hero-text .subtitle::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 0;
-            width: 60px;
-            height: 3px;
-            background: var(--gradient-1);
-            border-radius: 2px;
-        }
-
-        .hero-text p {
-            font-size: 1.2rem;
-            color: rgba(248, 250, 252, 0.85);
-            margin-bottom: 3rem;
-            line-height: 1.8;
-            max-width: 90%;
-        }
-
-        .highlight-box {
-            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(16, 185, 129, 0.1));
-            border-left: 4px solid var(--accent);
-            padding: 1.5rem;
-            border-radius: 12px;
-            margin: 2rem 0;
-        }
-
-        .highlight-box p {
-            margin: 0;
-            font-size: 1.1rem;
-            color: rgba(248, 250, 252, 0.9);
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-            margin-top: 3rem;
-        }
-
-        .btn {
-            padding: 1.2rem 2.5rem;
-            border-radius: 16px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            display: inline-flex;
-            align-items: center;
-            gap: 0.8rem;
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.7s ease;
-        }
-
-        .btn:hover::before {
-            left: 100%;
-        }
-
-        .btn-primary {
-            background: var(--gradient-1);
-            color: white;
-            box-shadow: 0 15px 40px rgba(99, 102, 241, 0.4);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 25px 60px rgba(99, 102, 241, 0.5);
-        }
-
-        .btn-secondary {
-            background: rgba(99, 102, 241, 0.15);
-            color: var(--primary);
-            border: 2px solid var(--primary);
-            backdrop-filter: blur(10px);
-        }
-
-        .btn-secondary:hover {
-            background: rgba(99, 102, 241, 0.25);
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(99, 102, 241, 0.3);
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: var(--light);
-            border: 2px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .btn-outline:hover {
-            border-color: var(--primary);
-            transform: translateY(-5px);
-        }
-
-        .hero-image {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .image-wrapper {
-            position: relative;
-            width: 500px;
-            height: 500px;
-        }
-
-        .floating-card {
-            position: absolute;
-            background: rgba(30, 41, 59, 0.9);
-            padding: 1.8rem;
-            border-radius: 20px;
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
-            border: 1px solid rgba(99, 102, 241, 0.3);
-            backdrop-filter: blur(10px);
-            animation: float-card 8s ease-in-out infinite;
-            z-index: 2;
-            min-width: 180px;
-        }
-
-        @keyframes float-card {
-
-            0%,
-            100% {
-                transform: translateY(0) rotate(0deg);
-            }
-
-            33% {
-                transform: translateY(-25px) rotate(2deg);
-            }
-
-            66% {
-                transform: translateY(15px) rotate(-1deg);
-            }
-        }
-
-        .card-1 {
-            top: 0;
-            right: -60px;
-            animation-delay: 0s;
-            border-top: 4px solid var(--primary);
-        }
-
-        .card-2 {
-            bottom: 80px;
-            left: -60px;
-            animation-delay: 2.5s;
-            border-top: 4px solid var(--secondary);
-        }
-
-        .card-3 {
-            bottom: 20px;
-            right: -40px;
-            animation-delay: 5s;
-            border-top: 4px solid var(--accent);
-        }
-
-        .floating-card i {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            display: block;
-        }
-
-        .card-1 i {
-            color: var(--primary);
-        }
-
-        .card-2 i {
-            color: var(--secondary);
-        }
-
-        .card-3 i {
-            color: var(--accent);
-        }
-
-        .floating-card p {
-            font-size: 1rem;
-            color: var(--gray);
-            margin: 0;
-        }
-
-        .floating-card strong {
-            color: var(--light);
-            font-size: 1.3rem;
-            display: block;
-            margin-bottom: 0.3rem;
-        }
-
-        .profile-circle {
-            width: 380px;
-            height: 380px;
-            border-radius: 50%;
-            background: var(--gradient-1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            animation: pulse-ring 4s ease-out infinite;
-            margin: 0 auto;
-        }
-
-        @keyframes pulse-ring {
-            0% {
-                box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.7);
-            }
-
-            70% {
-                box-shadow: 0 0 0 70px rgba(99, 102, 241, 0);
-            }
-
-            100% {
-                box-shadow: 0 0 0 0 rgba(99, 102, 241, 0);
-            }
-        }
-
-        .profile-circle::before {
-            content: '';
-            position: absolute;
-            inset: 12px;
-            border-radius: 50%;
-            background: var(--darker);
-            z-index: 1;
-        }
-
-        .profile-icon {
-            font-size: 10rem;
-            color: var(--primary);
-            position: relative;
-            z-index: 2;
-            filter: drop-shadow(0 10px 20px rgba(99, 102, 241, 0.4));
-        }
-
-        /* Secciones */
-        section {
-            padding: 8rem 2rem;
-            max-width: 1400px;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 6rem;
-            position: relative;
-        }
-
-        .section-header h2 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            letter-spacing: -1px;
-        }
-
-        .section-header .gradient-text {
-            font-size: 3.5rem;
-        }
-
-        .section-header p {
-            font-size: 1.3rem;
-            color: var(--gray);
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .section-number {
-            position: absolute;
-            font-size: 12rem;
-            font-weight: 900;
-            color: rgba(255, 255, 255, 0.02);
-            top: -40px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: -1;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        /* Stack Tecnológico */
-        .tech-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-            gap: 2.5rem;
-        }
-
-        .tech-item {
-            background: var(--card-bg);
-            padding: 2.5rem 1.5rem;
-            border-radius: 24px;
-            text-align: center;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 2px solid transparent;
-            position: relative;
-            overflow: hidden;
-            backdrop-filter: blur(10px);
-        }
-
-        .tech-item::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: var(--gradient-1);
-            opacity: 0;
-            transition: opacity 0.4s ease;
-        }
-
-        .tech-item:hover {
-            transform: translateY(-15px) scale(1.05);
-            border-color: var(--primary);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
-        }
-
-        .tech-item:hover::before {
-            opacity: 0.1;
-        }
-
-        .tech-item i {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            color: var(--primary);
-            position: relative;
-            z-index: 1;
-            transition: all 0.3s ease;
-        }
-
-        .tech-item:hover i {
-            transform: scale(1.2);
-        }
-
-        .tech-item p {
-            font-weight: 700;
-            font-size: 1.1rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .tech-level {
-            display: inline-block;
-            margin-top: 0.8rem;
-            padding: 0.3rem 1rem;
-            background: rgba(16, 185, 129, 0.2);
-            color: var(--accent);
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
-
-        /* Experiencia Mejorada */
-        .timeline {
-            position: relative;
-            padding-left: 4rem;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 3px;
-            background: var(--gradient-1);
-            border-radius: 3px;
-        }
-
-        .timeline-item {
-            margin-bottom: 4rem;
-            position: relative;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -4.5rem;
-            top: 0;
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            background: var(--primary);
-            border: 6px solid var(--darker);
-            box-shadow: 0 0 30px var(--primary);
-            z-index: 1;
-        }
-
-        .timeline-item::after {
-            content: '';
-            position: absolute;
-            left: -4.5rem;
-            top: 0;
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            background: var(--primary);
-            opacity: 0.3;
-            animation: pulse-dot 2s ease-out infinite;
-        }
-
-        @keyframes pulse-dot {
-            0% {
-                transform: scale(1);
-                opacity: 0.3;
-            }
-
-            70% {
-                transform: scale(2);
-                opacity: 0;
-            }
-
-            100% {
-                transform: scale(1);
-                opacity: 0;
-            }
-        }
-
-        .experience-card {
-            background: var(--card-bg);
-            padding: 3rem;
-            border-radius: 28px;
-            border-left: 6px solid var(--primary);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            backdrop-filter: blur(10px);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .experience-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 100%;
-            background: var(--gradient-1);
-            opacity: 0;
-            transition: opacity 0.4s ease;
-        }
-
-        .experience-card:hover {
-            transform: translateX(15px) translateY(-10px);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
-            border-left-color: var(--accent);
-        }
-
-        .experience-card:hover::before {
-            opacity: 0.05;
-        }
-
-        .experience-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 1.5rem;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .experience-title {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--light);
-            line-height: 1.3;
-        }
-
-        .experience-period {
-            background: rgba(99, 102, 241, 0.25);
-            color: var(--primary);
-            padding: 0.8rem 1.5rem;
-            border-radius: 30px;
-            font-size: 1rem;
-            font-weight: 700;
-            white-space: nowrap;
-            backdrop-filter: blur(10px);
-        }
-
-        .experience-company {
-            color: var(--accent);
-            font-size: 1.3rem;
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-            position: relative;
-            z-index: 1;
-        }
-
-        .company-logo {
-            display: inline-block;
-            margin-right: 10px;
-            font-size: 1.2rem;
-        }
-
-        .experience-list {
-            list-style: none;
-            position: relative;
-            z-index: 1;
-        }
-
-        .experience-list li {
-            padding: 1rem 0;
-            padding-left: 2rem;
-            position: relative;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-            transition: all 0.3s ease;
-        }
-
-        .experience-list li:hover {
-            transform: translateX(10px);
-            border-bottom-color: rgba(99, 102, 241, 0.3);
-        }
-
-        .experience-list li::before {
-            content: '▸';
-            position: absolute;
-            left: 0;
-            color: var(--primary);
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        .experience-list li:last-child {
-            border-bottom: none;
-        }
-
-        .tech-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.8rem;
-            margin-top: 1.5rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .tech-tag {
-            background: rgba(99, 102, 241, 0.15);
-            color: var(--primary);
-            padding: 0.5rem 1.2rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .tech-tag:hover {
-            background: rgba(99, 102, 241, 0.3);
-            transform: translateY(-3px);
-        }
-
-        /* DevOps Section */
-        .devops-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 3rem;
-        }
-
-        .devops-card {
-            background: var(--card-bg);
-            padding: 3rem;
-            border-radius: 28px;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            border-top: 4px solid transparent;
-            backdrop-filter: blur(10px);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .devops-card:nth-child(1) {
-            border-top-color: var(--primary);
-        }
-
-        .devops-card:nth-child(2) {
-            border-top-color: var(--accent);
-        }
-
-        .devops-card:nth-child(3) {
-            border-top-color: var(--secondary);
-        }
-
-        .devops-card:nth-child(4) {
-            border-top-color: var(--warning);
-        }
-
-        .devops-card:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
-        }
-
-        .devops-icon {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .devops-card:nth-child(1) .devops-icon {
-            color: var(--primary);
-        }
-
-        .devops-card:nth-child(2) .devops-icon {
-            color: var(--accent);
-        }
-
-        .devops-card:nth-child(3) .devops-icon {
-            color: var(--secondary);
-        }
-
-        .devops-card:nth-child(4) .devops-icon {
-            color: var(--warning);
-        }
-
-        .devops-card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            color: var(--light);
-        }
-
-        .devops-list {
-            list-style: none;
-        }
-
-        .devops-list li {
-            padding: 0.8rem 0;
-            padding-left: 1.8rem;
-            position: relative;
-        }
-
-        .devops-list li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--accent);
-            font-weight: bold;
-        }
-
-        /* Habilidades Mejoradas */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 3rem;
-        }
-
-        .skill-category {
-            background: var(--card-bg);
-            padding: 2.5rem;
-            border-radius: 24px;
-            border-top: 6px solid var(--primary);
-            transition: all 0.4s ease;
-            backdrop-filter: blur(10px);
-        }
-
-        .skill-category:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
-        }
-
-        .skill-category h3 {
-            color: var(--primary);
-            margin-bottom: 2rem;
-            font-size: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .skill-category h3 i {
-            font-size: 1.8rem;
-        }
-
-        .skill-item {
-            margin-bottom: 2rem;
-        }
-
-        .skill-header {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 0.8rem;
-        }
-
-        .skill-name {
-            font-weight: 700;
-            font-size: 1.1rem;
-        }
-
-        .skill-level {
-            color: var(--accent);
-            font-size: 1rem;
-            font-weight: 700;
-        }
-
-        .skill-bar {
-            height: 12px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .skill-progress {
-            height: 100%;
-            background: var(--gradient-1);
-            border-radius: 10px;
-            transition: width 2s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .skill-progress::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            animation: shimmer 2s infinite;
-        }
-
-        @keyframes shimmer {
-            0% {
-                transform: translateX(-100%);
-            }
-
-            100% {
-                transform: translateX(100%);
-            }
-        }
-
-        /* Educación Mejorada */
-        .education-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 3rem;
-        }
-
-        .education-card {
-            background: var(--card-bg);
-            padding: 3rem;
-            border-radius: 24px;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-            backdrop-filter: blur(10px);
-        }
-
-        .education-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 6px;
-            background: var(--gradient-1);
-        }
-
-        .education-card:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
-        }
-
-        .education-icon {
-            font-size: 3.5rem;
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-        }
-
-        .education-degree {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            line-height: 1.4;
-        }
-
-        .education-school {
-            color: var(--accent);
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .education-period {
-            color: var(--gray);
-            font-size: 1rem;
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .education-period i {
-            color: var(--secondary);
-        }
-
-        .education-details {
-            color: rgba(248, 250, 252, 0.8);
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        /* Contacto Mejorado */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 3rem;
-            margin-bottom: 4rem;
-        }
-
-        .contact-card {
-            background: var(--card-bg);
-            padding: 3rem 2rem;
-            border-radius: 24px;
-            text-align: center;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 2px solid transparent;
-            backdrop-filter: blur(10px);
-        }
-
-        .contact-card:hover {
-            transform: translateY(-15px) scale(1.03);
-            border-color: var(--primary);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
-        }
-
-        .contact-icon {
-            font-size: 3.5rem;
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-        }
-
-        .contact-title {
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-
-        .contact-info {
-            color: var(--gray);
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-        }
-
-        .contact-link {
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .contact-link:hover {
-            color: var(--primary);
-            gap: 1rem;
-        }
-
-        .cta-box {
-            background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(236, 72, 153, 0.15));
-            padding: 4rem;
-            border-radius: 32px;
-            text-align: center;
-            border: 2px solid rgba(99, 102, 241, 0.3);
-            backdrop-filter: blur(20px);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-box::before {
-            content: '';
-            position: absolute;
-            top: -100%;
-            left: -100%;
-            right: -100%;
-            bottom: -100%;
-            background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
-            animation: shine 6s infinite;
-        }
-
-        @keyframes shine {
-            0% {
-                transform: translateX(-100%) translateY(-100%) rotate(45deg);
-            }
-
-            100% {
-                transform: translateX(100%) translateY(100%) rotate(45deg);
-            }
-        }
-
-        .cta-box h3 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .cta-box p {
-            color: var(--gray);
-            margin-bottom: 3rem;
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            position: relative;
-            z-index: 1;
-        }
-
-        /* Footer Mejorado */
-        footer {
-            background: rgba(15, 23, 42, 0.95);
-            padding: 4rem 2rem;
-            text-align: center;
-            border-top: 1px solid rgba(99, 102, 241, 0.2);
-            backdrop-filter: blur(20px);
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .social-links a {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: var(--card-bg);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--light);
-            font-size: 1.8rem;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .social-links a::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--gradient-1);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .social-links a:hover {
-            transform: translateY(-10px) scale(1.1);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-        }
-
-        .social-links a:hover::before {
-            opacity: 1;
-        }
-
-        .social-links a i {
-            position: relative;
-            z-index: 1;
-        }
-
-        footer p {
-            color: var(--gray);
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-        }
-
-        .copyright {
-            color: var(--gray);
-            font-size: 0.9rem;
-            opacity: 0.7;
-        }
-
-        /* Mobile Menu */
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--light);
-            font-size: 1.8rem;
-            cursor: pointer;
-            z-index: 1001;
-            width: 50px;
-            height: 50px;
-            border-radius: 12px;
-            background: rgba(99, 102, 241, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-        }
-
-        .mobile-menu-btn:hover {
-            background: rgba(99, 102, 241, 0.2);
-            transform: scale(1.1);
-        }
-
-        .mobile-nav {
-            position: fixed;
-            top: 0;
-            right: -100%;
-            width: 300px;
-            height: 100%;
-            background: rgba(15, 23, 42, 0.98);
-            backdrop-filter: blur(30px);
-            padding: 6rem 2rem 2rem;
-            z-index: 999;
-            transition: right 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            border-left: 1px solid rgba(99, 102, 241, 0.2);
-        }
-
-        .mobile-nav.active {
-            right: 0;
-        }
-
-        .mobile-nav-links {
-            list-style: none;
-        }
-
-        .mobile-nav-links li {
-            margin-bottom: 1.5rem;
-        }
-
-        .mobile-nav-links a {
-            color: var(--light);
-            text-decoration: none;
-            font-size: 1.2rem;
-            font-weight: 600;
-            display: block;
-            padding: 1rem;
-            border-radius: 12px;
-            transition: all 0.3s ease;
-        }
-
-        .mobile-nav-links a:hover {
-            background: rgba(99, 102, 241, 0.2);
-            transform: translateX(10px);
-        }
-
-        .mobile-nav-links a.active {
-            background: rgba(99, 102, 241, 0.3);
-            color: var(--primary);
-        }
-
-        /* Responsive */
-        @media (max-width: 1200px) {
-            .hero-content {
-                gap: 4rem;
-            }
-
-            .hero-text h1 {
-                font-size: 3.5rem;
-            }
-
-            .image-wrapper {
-                width: 450px;
-                height: 450px;
-            }
-        }
-
-        @media (max-width: 992px) {
-            .hero-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-                gap: 5rem;
-            }
-
-            .hero-text h1 {
-                font-size: 3rem;
-            }
-
-            .hero-text p {
-                max-width: 100%;
-            }
-
-            .image-wrapper {
-                width: 400px;
-                height: 400px;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
-            .mobile-menu-btn {
-                display: flex;
-            }
-
-            .section-header h2 {
-                font-size: 2.8rem;
-            }
-
-            .timeline {
-                padding-left: 3rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .hero-text h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero-text .subtitle {
-                font-size: 1.5rem;
-            }
-
-            .image-wrapper {
-                width: 350px;
-                height: 350px;
-            }
-
-            .floating-card {
-                padding: 1.2rem;
-                min-width: 150px;
-            }
-
-            .card-1 {
-                right: -30px;
-            }
-
-            .card-2 {
-                left: -30px;
-            }
-
-            .card-3 {
-                right: -20px;
-            }
-
-            .section-header h2 {
-                font-size: 2.3rem;
-            }
-
-            .section-number {
-                font-size: 8rem;
-            }
-
-            .cta-box {
-                padding: 3rem 1.5rem;
-            }
-
-            .cta-box h3 {
-                font-size: 2rem;
-            }
-
-            .experience-card {
-                padding: 2rem;
-            }
-
-            .experience-title {
-                font-size: 1.5rem;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .hero {
-                padding: 7rem 1.5rem 3rem;
-            }
-
-            .hero-text h1 {
-                font-size: 2.2rem;
-            }
-
-            .image-wrapper {
-                width: 300px;
-                height: 300px;
-            }
-
-            .profile-circle {
-                width: 280px;
-                height: 280px;
-            }
-
-            .profile-icon {
-                font-size: 7rem;
-            }
-
-            .floating-card {
-                display: none;
-            }
-
-            section {
-                padding: 5rem 1.5rem;
-            }
-
-            .section-header h2 {
-                font-size: 2rem;
-            }
-
-            .btn {
-                padding: 1rem 2rem;
-                width: 100%;
-                justify-content: center;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-            }
-        }
-
-        /* Animaciones */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(40px);
-            animation: fadeInUp 1s ease forwards;
-        }
-
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .stagger-1 {
-            animation-delay: 0.1s;
-        }
-
-        .stagger-2 {
-            animation-delay: 0.2s;
-        }
-
-        .stagger-3 {
-            animation-delay: 0.3s;
-        }
-
-        .stagger-4 {
-            animation-delay: 0.4s;
-        }
-
-        .stagger-5 {
-            animation-delay: 0.5s;
-        }
-
-        .stagger-6 {
-            animation-delay: 0.6s;
-        }
-
-        /* Scroll Progress */
-        .scroll-progress {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 0%;
-            height: 3px;
-            background: var(--gradient-1);
-            z-index: 1001;
-            transition: width 0.1s ease;
-        }
-
-        /* Back to top button */
-        .back-to-top {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            width: 50px;
-            height: 50px;
-            background: var(--gradient-1);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            cursor: pointer;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(20px);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            z-index: 999;
-            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
-        }
-
-        .back-to-top.visible {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-
-        .back-to-top:hover {
-            transform: translateY(-5px) scale(1.1);
-            box-shadow: 0 15px 40px rgba(99, 102, 241, 0.6);
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/main.css">
 </head>
 
 <body>
@@ -1556,6 +33,7 @@
                 <li><a href="#devops">DevOps</a></li>
                 <li><a href="#habilidades">Habilidades</a></li>
                 <li><a href="#educacion">Educación</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
             <button class="mobile-menu-btn" id="mobileMenuBtn">
@@ -1573,6 +51,7 @@
             <li><a href="#devops">DevOps</a></li>
             <li><a href="#habilidades">Habilidades</a></li>
             <li><a href="#educacion">Educación</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
             <li><a href="#contacto">Contacto</a></li>
         </ul>
     </div>
@@ -1601,6 +80,22 @@
                     </p>
                 </div>
 
+                <!-- Redes Sociales -->
+                <div class="social-links-hero fade-in stagger-5">
+                    <a href="https://github.com/ieharo1" target="_blank" class="social-link" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/isaac-haro/" target="_blank" class="social-link" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://wa.me/593988055517" target="_blank" class="social-link" title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="mailto:zackharo1@gmail.com" class="social-link" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+
                 <div class="cta-buttons fade-in stagger-5">
                     <a href="#contacto" class="btn btn-primary">
                         <i class="fas fa-envelope"></i>
@@ -1609,10 +104,6 @@
                     <a href="#experiencia" class="btn btn-secondary">
                         <i class="fas fa-briefcase"></i>
                         Ver Experiencia
-                    </a>
-                    <a href="https://github.com/ieharo1" target="_blank" class="btn btn-outline">
-                        <i class="fab fa-github"></i>
-                        GitHub
                     </a>
                 </div>
             </div>
@@ -1648,45 +139,151 @@
             <h2><span class="gradient-text">Stack</span> Tecnológico</h2>
             <p>Tecnologías y herramientas que domino y utilizo diariamente</p>
         </div>
+        
         <div class="tech-grid">
+            <!-- Backend -->
             <div class="tech-item fade-in stagger-1">
                 <i class="fab fa-python"></i>
                 <p>Python</p>
                 <span class="tech-level">Avanzado</span>
             </div>
             <div class="tech-item fade-in stagger-2">
-                <i class="fab fa-python"></i>
+                <i class="fas fa-server"></i>
                 <p>Django</p>
                 <span class="tech-level">Avanzado</span>
             </div>
             <div class="tech-item fade-in stagger-3">
+                <i class="fas fa-bolt"></i>
+                <p>FastAPI</p>
+                <span class="tech-level">Avanzado</span>
+            </div>
+            <div class="tech-item fade-in stagger-4">
                 <i class="fab fa-php"></i>
                 <p>PHP</p>
                 <span class="tech-level">Avanzado</span>
             </div>
-            <div class="tech-item fade-in stagger-4">
+            <div class="tech-item fade-in stagger-1">
                 <i class="fab fa-laravel"></i>
                 <p>Laravel</p>
                 <span class="tech-level">Avanzado</span>
             </div>
+            <div class="tech-item fade-in stagger-2">
+                <i class="fas fa-fire"></i>
+                <p>Livewire</p>
+                <span class="tech-level">Avanzado</span>
+            </div>
+            <div class="tech-item fade-in stagger-3">
+                <i class="fab fa-node-js"></i>
+                <p>Node.js</p>
+                <span class="tech-level">Intermedio</span>
+            </div>
+            <div class="tech-item fade-in stagger-4">
+                <i class="fab fa-golang"></i>
+                <p>Go</p>
+                <span class="tech-level">Intermedio</span>
+            </div>
             <div class="tech-item fade-in stagger-1">
+                <i class="fab fa-microsoft"></i>
+                <p>C# .NET</p>
+                <span class="tech-level">Intermedio</span>
+            </div>
+            <!-- Frontend -->
+            <div class="tech-item fade-in stagger-2">
                 <i class="fab fa-js"></i>
                 <p>JavaScript</p>
                 <span class="tech-level">Avanzado</span>
             </div>
-            <div class="tech-item fade-in stagger-2">
+            <div class="tech-item fade-in stagger-3">
                 <i class="fab fa-react"></i>
                 <p>React</p>
                 <span class="tech-level">Intermedio</span>
             </div>
-            <div class="tech-item fade-in stagger-3">
+            <div class="tech-item fade-in stagger-4">
                 <i class="fab fa-angular"></i>
                 <p>Angular</p>
                 <span class="tech-level">Intermedio</span>
             </div>
+            <div class="tech-item fade-in stagger-1">
+                <i class="fab fa-vuejs"></i>
+                <p>Vue.js</p>
+                <span class="tech-level">Intermedio</span>
+            </div>
+            <div class="tech-item fade-in stagger-2">
+                <i class="fab fa-html5"></i>
+                <p>HTML5</p>
+                <span class="tech-level">Avanzado</span>
+            </div>
+            <div class="tech-item fade-in stagger-3">
+                <i class="fab fa-css3-alt"></i>
+                <p>CSS3</p>
+                <span class="tech-level">Avanzado</span>
+            </div>
             <div class="tech-item fade-in stagger-4">
+                <i class="fab fa-bootstrap"></i>
+                <p>Bootstrap 5</p>
+                <span class="tech-level">Avanzado</span>
+            </div>
+            <div class="tech-item fade-in stagger-1">
+                <i class="fas fa-wind"></i>
+                <p>Tailwind</p>
+                <span class="tech-level">Intermedio</span>
+            </div>
+            <!-- Mobile -->
+            <div class="tech-item fade-in stagger-2">
+                <i class="fas fa-mobile-alt"></i>
+                <p>Flutter</p>
+                <span class="tech-level">Intermedio</span>
+            </div>
+            <div class="tech-item fade-in stagger-3">
+                <i class="fas fa-code"></i>
+                <p>Dart</p>
+                <span class="tech-level">Intermedio</span>
+            </div>
+            <div class="tech-item fade-in stagger-4">
+                <i class="fas fa-fire"></i>
+                <p>Firebase</p>
+                <span class="tech-level">Intermedio</span>
+            </div>
+            <!-- Databases -->
+            <div class="tech-item fade-in stagger-1">
+                <i class="fas fa-database"></i>
+                <p>SQL Server</p>
+                <span class="tech-level">Avanzado</span>
+            </div>
+            <div class="tech-item fade-in stagger-2">
+                <i class="fas fa-database"></i>
+                <p>PostgreSQL</p>
+                <span class="tech-level">Avanzado</span>
+            </div>
+            <div class="tech-item fade-in stagger-3">
+                <i class="fas fa-database"></i>
+                <p>MySQL</p>
+                <span class="tech-level">Avanzado</span>
+            </div>
+            <div class="tech-item fade-in stagger-4">
+                <i class="fas fa-leaf"></i>
+                <p>MongoDB</p>
+                <span class="tech-level">Intermedio</span>
+            </div>
+            <div class="tech-item fade-in stagger-1">
+                <i class="fas fa-database"></i>
+                <p>Redis</p>
+                <span class="tech-level">Intermedio</span>
+            </div>
+            <div class="tech-item fade-in stagger-2">
+                <i class="fas fa-search"></i>
+                <p>Elasticsearch</p>
+                <span class="tech-level">Básico</span>
+            </div>
+            <!-- DevOps & Cloud -->
+            <div class="tech-item fade-in stagger-3">
                 <i class="fab fa-docker"></i>
                 <p>Docker</p>
+                <span class="tech-level">Intermedio</span>
+            </div>
+            <div class="tech-item fade-in stagger-4">
+                <i class="fas fa-dharmachakra"></i>
+                <p>Kubernetes</p>
                 <span class="tech-level">Intermedio</span>
             </div>
             <div class="tech-item fade-in stagger-1">
@@ -1695,39 +292,65 @@
                 <span class="tech-level">Avanzado</span>
             </div>
             <div class="tech-item fade-in stagger-2">
-                <i class="fas fa-database"></i>
-                <p>SQL Server</p>
+                <i class="fab fa-github"></i>
+                <p>GitHub</p>
                 <span class="tech-level">Avanzado</span>
             </div>
             <div class="tech-item fade-in stagger-3">
-                <i class="fas fa-leaf"></i>
-                <p>MongoDB</p>
-                <span class="tech-level">Intermedio</span>
-            </div>
-            <div class="tech-item fade-in stagger-4">
                 <i class="fab fa-linux"></i>
                 <p>Linux</p>
                 <span class="tech-level">Avanzado</span>
             </div>
-            <div class="tech-item fade-in stagger-1">
-                <i class="fab fa-aws"></i>
-                <p>AWS</p>
-                <span class="tech-level">Intermedio</span>
+            <div class="tech-item fade-in stagger-4">
+                <i class="fab fa-windows"></i>
+                <p>Windows Server</p>
+                <span class="tech-level">Avanzado</span>
             </div>
-            <div class="tech-item fade-in stagger-2">
+            <div class="tech-item fade-in stagger-1">
                 <i class="fas fa-server"></i>
                 <p>Nginx</p>
                 <span class="tech-level">Intermedio</span>
             </div>
+            <div class="tech-item fade-in stagger-2">
+                <i class="fab fa-aws"></i>
+                <p>AWS</p>
+                <span class="tech-level">Intermedio</span>
+            </div>
             <div class="tech-item fade-in stagger-3">
+                <i class="fab fa-microsoft"></i>
+                <p>Azure</p>
+                <span class="tech-level">Intermedio</span>
+            </div>
+            <!-- Automation & AI -->
+            <div class="tech-item fade-in stagger-4">
                 <i class="fas fa-brain"></i>
                 <p>n8n</p>
                 <span class="tech-level">Avanzado</span>
             </div>
-            <div class="tech-item fade-in stagger-4">
-                <i class="fas fa-fire"></i>
-                <p>Firebase</p>
+            <div class="tech-item fade-in stagger-1">
+                <i class="fas fa-robot"></i>
+                <p>OpenCV</p>
                 <span class="tech-level">Intermedio</span>
+            </div>
+            <div class="tech-item fade-in stagger-2">
+                <i class="fas fa-eye"></i>
+                <p>YOLO</p>
+                <span class="tech-level">Intermedio</span>
+            </div>
+            <div class="tech-item fade-in stagger-3">
+                <i class="fas fa-chart-bar"></i>
+                <p>Apache Spark</p>
+                <span class="tech-level">Intermedio</span>
+            </div>
+            <div class="tech-item fade-in stagger-4">
+                <i class="fas fa-laptop-code"></i>
+                <p>PowerShell</p>
+                <span class="tech-level">Avanzado</span>
+            </div>
+            <div class="tech-item fade-in stagger-1">
+                <i class="fas fa-terminal"></i>
+                <p>Bash</p>
+                <span class="tech-level">Avanzado</span>
             </div>
         </div>
     </section>
@@ -1751,7 +374,7 @@
                                 Quifatex S.A. / Intercorp
                             </p>
                         </div>
-                        <span class="experience-period">Sep 2024 - Actualidad</span>
+                        <span class="experience-period">Sep 2025 - Actualidad</span>
                     </div>
                     <ul class="experience-list">
                         <li>Desarrollo de sistemas internos con Python (Django) y Bootstrap 5, aplicando buenas
@@ -1771,8 +394,6 @@
                         </li>
                         <li>Implementación, configuración y administración de infraestructura de servidores y entornos
                             de despliegue</li>
-                        <li>Soporte a procesos del entorno retail, incluyendo operaciones comerciales, inventarios,
-                            facturación y continuidad operativa de sistemas críticos</li>
                     </ul>
                     <div class="tech-tags">
                         <span class="tech-tag">Python</span>
@@ -1798,7 +419,7 @@
                                 Universidad del Pacífico / Universidad de Andorra
                             </p>
                         </div>
-                        <span class="experience-period">Abr 2024 - Sep 2024</span>
+                        <span class="experience-period">Abr 2024 - Sep 2025</span>
                     </div>
                     <ul class="experience-list">
                         <li>Desarrollo de sistemas internos utilizando PHP, Laravel y Livewire, incluyendo módulos
@@ -1864,6 +485,49 @@
                 </div>
             </div>
 
+            <!-- Experiencia 5 - TST SOLUTIONS -->
+            <div class="timeline-item fade-in">
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div>
+                            <h3 class="experience-title">Arquitecto y Desarrollador Full Stack</h3>
+                            <p class="experience-company">
+                                <i class="fas fa-building company-logo"></i>
+                                TST SOLUTIONS (Startup - SaaS)
+                            </p>
+                        </div>
+                        <span class="experience-period">Ene 2026 - Actualidad</span>
+                    </div>
+                    <ul class="experience-list">
+                        <li>Diseño y desarrollo de plataformas SaaS multi-cliente bajo arquitectura modular y escalable</li>
+                        <li>Desarrollo backend con Python (Django) y PHP (Laravel), aplicando principios de arquitectura limpia, seguridad y separación por entornos (DEV / QA / PROD)</li>
+                        <li>Implementación de frontend moderno con Bootstrap 5, Tailwind y frameworks JS según requerimiento del cliente</li>
+                        <li>Diseño y optimización de bases de datos SQL Server y MySQL para entornos productivos</li>
+                        <li>Integración de APIs REST, webhooks y servicios externos para automatización de procesos empresariales</li>
+                        <li>Automatización de flujos operativos mediante n8n y procesamiento asíncrono con Celery + Redis</li>
+                        <li>Implementación de infraestructura en servidores Linux con Nginx + Gunicorn, SSL y configuración segura por dominio</li>
+                        <li>Gestión de repositorios privados para clientes, control de versiones con Git y estrategias de branching profesional</li>
+                        <li>Contenerización con Docker y Docker Compose para despliegues reproducibles</li>
+                        <li>Configuración de dominios, DNS, VPS y entornos cloud</li>
+                        <li>Implementación de monitoreo básico, logging y control de errores en producción</li>
+                        <li>Documentación técnica de arquitectura, endpoints y procesos para clientes</li>
+                        <li>Soporte post-implementación y mejoras evolutivas sobre sistemas en operación</li>
+                    </ul>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Django</span>
+                        <span class="tech-tag">Laravel</span>
+                        <span class="tech-tag">SaaS</span>
+                        <span class="tech-tag">Arquitectura de Software</span>
+                        <span class="tech-tag">n8n</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">Linux</span>
+                        <span class="tech-tag">SQL Server</span>
+                        <span class="tech-tag">MySQL</span>
+                    </div>
+                </div>
+            </div>
+
             <!-- Experiencia 4 -->
             <div class="timeline-item fade-in">
                 <div class="experience-card">
@@ -1897,14 +561,15 @@
                     </div>
                 </div>
             </div>
-            <!-- Experiencia 5 - Pasantía -->
+
+            <!-- Experiencia 6 - Pasante de Sistemas -->
             <div class="timeline-item fade-in">
                 <div class="experience-card">
                     <div class="experience-header">
                         <div>
                             <h3 class="experience-title">Pasante de Sistemas</h3>
                             <p class="experience-company">
-                                <i class="fas fa-graduation-cap company-logo"></i>
+                                <i class="fas fa-headset company-logo"></i>
                                 Puntonet
                             </p>
                         </div>
@@ -2243,10 +908,388 @@
         </div>
     </section>
 
+    <!-- Proyectos -->
+    <section id="proyectos">
+        <div class="section-header">
+            <div class="section-number">06</div>
+            <h2><span class="gradient-text">Proyectos</span> Destacados</h2>
+            <p>Algunos de mis proyectos personales y aplicaciones desarrolladas</p>
+        </div>
+        
+        <div class="projects-section">
+            <!-- Juegos -->
+            <div class="project-category fade-in">
+                <h3 class="project-category-title">🎮 Juegos & Aplicaciones Interactivas</h3>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h4>🚀 SKY NODE ESCAPE</h4>
+                        <p>Aventura espacial</p>
+                        <a href="https://ieharo1.github.io/SKY-NODE-ESCAPE/" target="_blank" class="btn-project">
+                            Ver Proyecto <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <h4>🧱 TETRIS PRO</h4>
+                        <p>Clásico juego Tetris</p>
+                        <a href="https://ieharo1.github.io/TETRIS-PRO/" target="_blank" class="btn-project">
+                            Ver Proyecto <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <h4>🐰 CONEJO SALTARIN</h4>
+                        <p>Juego de saltos</p>
+                        <a href="https://ieharo1.github.io/CONEJO-SALTARIN/" target="_blank" class="btn-project">
+                            Ver Proyecto <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <h4>🦎 TERRA CREATURES</h4>
+                        <p>Exploración de criaturas</p>
+                        <a href="https://ieharo1.github.io/TERRA-CREATURES/" target="_blank" class="btn-project">
+                            Ver Proyecto <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <h4>🎯 AIM LEGEND</h4>
+                        <p>Aimbot con sistema de timing</p>
+                        <a href="https://ieharo1.github.io/AIM-LEGEND/" target="_blank" class="btn-project">
+                            Ver Proyecto <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboards -->
+            <div class="project-category fade-in">
+                <h3 class="project-category-title">📊 Dashboards & Visualización de Datos</h3>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h4>📈 CRYPTO DASHBOARD</h4>
+                        <p>Monitoreo de criptomonedas</p>
+                        <a href="https://ieharo1.github.io/CRYPTO-DASHBOARD/" target="_blank" class="btn-project">
+                            Ver Proyecto <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <h4>🗺️ INDICADORES MAPA ECUADOR</h4>
+                        <p>Mapa de indicadores</p>
+                        <a href="https://ieharo1.github.io/INDICADORES-MAPA-ECUADOR/" target="_blank" class="btn-project">
+                            Ver Proyecto <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <h4>🚗 WAZE ECUADOR SIMULATOR</h4>
+                        <p>Simulador de tráfico</p>
+                        <a href="https://ieharo1.github.io/WAZE-ECUADOR-SIMULADOR-TRAFICO/" target="_blank" class="btn-project">
+                            Ver Proyecto <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Business -->
+            <div class="project-category fade-in">
+                <h3 class="project-category-title">💼 Soluciones Empresariales</h3>
+                <div class="projects-grid">
+                    <div class="project-card featured">
+                        <h4>🚀 TST SOLUTIONS</h4>
+                        <p>Startup SaaS - Transformación Digital</p>
+                        <a href="https://tst-solutions.netlify.app/" target="_blank" class="btn-project">
+                            Ver Plataforma <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <h4>💼 TST SOLUTIONS</h4>
+                        <p>Plataforma de soluciones empresariales</p>
+                        <a href="https://ieharo1.github.io/TST-SOLUTIONS/" target="_blank" class="btn-project">
+                            Ver Proyecto <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <h4>🤖 LEGION CNC</h4>
+                        <p>Sistema de automatización CNC</p>
+                        <a href="https://ieharo1.github.io/LEGION-CNC-BY-TST-SOLUTIONS/" target="_blank" class="btn-project">
+                            Ver Proyecto <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <h4>🛒 SHOPPING</h4>
+                        <p>Plataforma e-commerce</p>
+                        <a href="https://ieharo1.github.io/SHOPPING/" target="_blank" class="btn-project">
+                            Ver Proyecto <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <h4>🎓 ACADEMY C</h4>
+                        <p>Plataforma educativa</p>
+                        <a href="https://ieharo1.github.io/ACADEMY-C/" target="_blank" class="btn-project">
+                            Ver Proyecto <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Security & Tools -->
+            <div class="project-category fade-in">
+                <h3 class="project-category-title">🔐 Seguridad & Herramientas</h3>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h4>🔒 SECURITY PLAYGROUND</h4>
+                        <p>Entorno de pruebas de seguridad</p>
+                        <a href="https://ieharo1.github.io/SECURITY-PLAYGROUND/" target="_blank" class="btn-project">
+                            Ver Proyecto <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <h4>📖 VIM EDITOR</h4>
+                        <p>Configuración y tips de Vim</p>
+                        <a href="https://ieharo1.github.io/VIM/" target="_blank" class="btn-project">
+                            Ver Proyecto <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Linux & DevOps -->
+            <div class="project-category fade-in">
+                <h3 class="project-category-title">🐍 Linux & DevOps Resources</h3>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h4>📄 PROCESAMIENTO TEXTO LINUX</h4>
+                        <p>Guía de procesamiento de texto</p>
+                        <a href="https://ieharo1.github.io/PROCESAMIENTO-TEXTO-LINUX/" target="_blank" class="btn-project">
+                            Ver Proyecto <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <h4>🔍 ANALIZADOR SISTEMA LINUX</h4>
+                        <p>Analizador del sistema</p>
+                        <a href="https://ieharo1.github.io/ANALIZADOR-SISTEMA-LINUX/" target="_blank" class="btn-project">
+                            Ver Proyecto <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <h4>⚙️ LINUX AVANZADO DEVOPS</h4>
+                        <p>Linux avanzado para DevOps</p>
+                        <a href="https://ieharo1.github.io/LINUX-AVANZADO-DEVOPS/" target="_blank" class="btn-project">
+                            Ver Proyecto <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <h4>🌍 MUNDO</h4>
+                        <p>Proyecto de exploración mundial</p>
+                        <a href="https://ieharo1.github.io/MUNDO/" target="_blank" class="btn-project">
+                            Ver Proyecto <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Guías Educativas -->
+            <div class="project-category fade-in">
+                <h3 class="project-category-title">📚 Guías Educativas - Zero to Advanced</h3>
+                <p style="color: var(--gray); margin-bottom: 2rem; text-align: center;">
+                    Plataformas educativas completas diseñadas para enseñar tecnologías desde fundamentos hasta conceptos avanzados.
+                </p>
+                <div class="projects-grid educational">
+                    <div class="project-card">
+                        <h4>🐍 Python desde Cero</h4>
+                        <p>Guía completa</p>
+                        <a href="https://ieharo1.github.io/PYTHON-DESDE-CERO-GUIA-COMPLETA/" target="_blank" class="btn-project">
+                            Ver Guía <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <h4>⚡ JavaScript desde Cero</h4>
+                        <p>Guía completa</p>
+                        <a href="https://ieharo1.github.io/JAVASCRIPT-DESDE-CERO-GUIA-COMPLETA/" target="_blank" class="btn-project">
+                            Ver Guía <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <h4>☕ Java desde Cero</h4>
+                        <p>Guía completa</p>
+                        <a href="https://ieharo1.github.io/JAVA-DESDE-CERO-GUIA-COMPLETA/" target="_blank" class="btn-project">
+                            Ver Guía <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <h4>🔷 C# desde Cero</h4>
+                        <p>Guía completa</p>
+                        <a href="https://ieharo1.github.io/C-SHARP-DESDE-CERO-GUIA-COMPLETA/" target="_blank" class="btn-project">
+                            Ver Guía <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <h4>©️ C desde Cero</h4>
+                        <p>Guía completa</p>
+                        <a href="https://ieharo1.github.io/C-DESDE-CERO-GUIA-COMPLETA/" target="_blank" class="btn-project">
+                            Ver Guía <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <h4>➕ C++ desde Cero</h4>
+                        <p>Guía completa</p>
+                        <a href="https://ieharo1.github.io/C-PLUS-PLUS-DESDE-CERO-GUIA-COMPLETA/" target="_blank" class="btn-project">
+                            Ver Guía <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <h4>🐹 Golang desde Cero</h4>
+                        <p>Guía completa</p>
+                        <a href="https://ieharo1.github.io/GOLANG-DESDE-CERO-GUIA-COMPLETA/" target="_blank" class="btn-project">
+                            Ver Guía <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <h4>🐘 PHP desde Cero</h4>
+                        <p>Guía completa</p>
+                        <a href="https://ieharo1.github.io/PHP-DESDE-CERO-GUIA-COMPLETA/" target="_blank" class="btn-project">
+                            Ver Guía <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <h4>📄 HTML5 desde Cero</h4>
+                        <p>Guía completa</p>
+                        <a href="https://ieharo1.github.io/HTML5-DESDE-CERO-GUIA-COMPLETA/" target="_blank" class="btn-project">
+                            Ver Guía <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <h4>🎨 CSS3 desde Cero</h4>
+                        <p>Guía completa</p>
+                        <a href="https://ieharo1.github.io/CSS3-DESDE-CERO-GUIA-COMPLETA/" target="_blank" class="btn-project">
+                            Ver Guía <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <h4>🅱️ Bootstrap 5 desde Cero</h4>
+                        <p>Guía completa</p>
+                        <a href="https://ieharo1.github.io/BOOTSTRAP-5-DESDE-CERO-GUIA-COMPLETA/" target="_blank" class="btn-project">
+                            Ver Guía <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <h4>🅰️ Angular desde Cero</h4>
+                        <p>Guía completa</p>
+                        <a href="https://ieharo1.github.io/ANGULAR-DESDE-CERO-GUIA-COMPLETA/" target="_blank" class="btn-project">
+                            Ver Guía <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <h4>⚛️ React desde Cero</h4>
+                        <p>Guía completa</p>
+                        <a href="https://ieharo1.github.io/REACT-DESDE-CERO-GUIA-COMPLETA/" target="_blank" class="btn-project">
+                            Ver Guía <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <h4>🔺 Laravel desde Cero</h4>
+                        <p>Guía completa</p>
+                        <a href="https://ieharo1.github.io/LARAVEL-DESDE-CERO-GUIA-COMPLETA/" target="_blank" class="btn-project">
+                            Ver Guía <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <h4>🎯 Django desde Cero</h4>
+                        <p>Guía completa</p>
+                        <a href="https://ieharo1.github.io/DJANGO-DESDE-CERO-GUIA-COMPLETA/" target="_blank" class="btn-project">
+                            Ver Guía <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <h4>⚡ FastAPI desde Cero</h4>
+                        <p>Guía completa</p>
+                        <a href="https://ieharo1.github.io/FASTAPI-DESDE-CERO-GUIA-COMPLETA/" target="_blank" class="btn-project">
+                            Ver Guía <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <h4>📱 Flutter desde Cero</h4>
+                        <p>Guía completa</p>
+                        <a href="https://ieharo1.github.io/FLUTTER-DESDE-CERO-GUIA-COMPLETA/" target="_blank" class="btn-project">
+                            Ver Guía <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <h4>🔥 Firebase desde Cero</h4>
+                        <p>Guía completa</p>
+                        <a href="https://ieharo1.github.io/FIREBASE-DESDE-CERO-GUIA-COMPLETA/" target="_blank" class="btn-project">
+                            Ver Guía <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <h4>📊 SQL Server desde Cero</h4>
+                        <p>Guía completa</p>
+                        <a href="https://ieharo1.github.io/SQL-SERVER-DESDE-CERO-GUIA-COMPLETA/" target="_blank" class="btn-project">
+                            Ver Guía <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <h4>🐘 PostgreSQL desde Cero</h4>
+                        <p>Guía completa</p>
+                        <a href="https://ieharo1.github.io/POSTGRESQL-DESDE-CERO-GUIA-COMPLETA/" target="_blank" class="btn-project">
+                            Ver Guía <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <h4>🐬 MySQL desde Cero</h4>
+                        <p>Guía completa</p>
+                        <a href="https://ieharo1.github.io/MYSQL-DESDE-CERO-GUIA-COMPLETA/" target="_blank" class="btn-project">
+                            Ver Guía <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <h4>🍃 MongoDB desde Cero</h4>
+                        <p>Guía completa</p>
+                        <a href="https://ieharo1.github.io/MONGODB-DESDE-CERO-GUIA-COMPLETA/" target="_blank" class="btn-project">
+                            Ver Guía <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <h4>🐧 Linux desde Cero</h4>
+                        <p>Guía completa</p>
+                        <a href="https://ieharo1.github.io/LINUX-DESDE-CERO-GUIA-COMPLETA/" target="_blank" class="btn-project">
+                            Ver Guía <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <h4>🐳 Docker desde Cero</h4>
+                        <p>Guía completa</p>
+                        <a href="https://ieharo1.github.io/DOCKER-DESDE-CERO-GUIA-COMPLETA/" target="_blank" class="btn-project">
+                            Ver Guía <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <h4>☸️ Kubernetes desde Cero</h4>
+                        <p>Guía completa</p>
+                        <a href="https://ieharo1.github.io/KUBERNETES-DESDE-CERO-GUIA-COMPLETA/" target="_blank" class="btn-project">
+                            Ver Guía <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <h4>📜 Git desde Cero</h4>
+                        <p>Guía completa</p>
+                        <a href="https://ieharo1.github.io/GIT-DESDE-CERO-GUIA-COMPLETA/" target="_blank" class="btn-project">
+                            Ver Guía <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <h4>⚡ Apache Spark desde Cero</h4>
+                        <p>Guía completa</p>
+                        <a href="https://ieharo1.github.io/APACHE-SPARK-DESDE-CERO-GUIA-COMPLETA/" target="_blank" class="btn-project">
+                            Ver Guía <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contacto -->
     <section id="contacto">
         <div class="section-header">
-            <div class="section-number">06</div>
+            <div class="section-number">07</div>
             <h2><span class="gradient-text">Contacto</span></h2>
             <p>¿Hablamos? Estoy abierto a oportunidades profesionales</p>
         </div>
@@ -2324,153 +1367,7 @@
         <i class="fas fa-chevron-up"></i>
     </div>
 
-    <script>
-        // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mobileNav = document.getElementById('mobileNav');
-        const mobileNavLinks = document.querySelectorAll('.mobile-nav-links a');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileNav.classList.toggle('active');
-            mobileMenuBtn.innerHTML = mobileNav.classList.contains('active')
-                ? '<i class="fas fa-times"></i>'
-                : '<i class="fas fa-bars"></i>';
-        });
-
-        // Close mobile menu when clicking a link
-        mobileNavLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileNav.classList.remove('active');
-                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-            });
-        });
-
-        // Header scroll effect
-        const header = document.getElementById('header');
-        const scrollProgress = document.getElementById('scrollProgress');
-        const backToTop = document.getElementById('backToTop');
-
-        window.addEventListener('scroll', () => {
-            // Header effect
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-
-            // Scroll progress
-            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrolled = (winScroll / height) * 100;
-            scrollProgress.style.width = scrolled + "%";
-
-            // Back to top button
-            if (window.scrollY > 500) {
-                backToTop.classList.add('visible');
-            } else {
-                backToTop.classList.remove('visible');
-            }
-
-            // Update active nav link
-            updateActiveNavLink();
-        });
-
-        // Back to top functionality
-        backToTop.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Update active navigation link based on scroll position
-        function updateActiveNavLink() {
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('.nav-links a, .mobile-nav-links a');
-
-            let currentSection = '';
-
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop - 100;
-                const sectionHeight = section.clientHeight;
-
-                if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-                    currentSection = '#' + section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === currentSection) {
-                    link.classList.add('active');
-                }
-            });
-        }
-
-        // Animate skill bars when they come into view
-        const observerOptions = {
-            threshold: 0.3
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const skillProgresses = entry.target.querySelectorAll('.skill-progress');
-                    skillProgresses.forEach(progress => {
-                        const width = progress.style.width;
-                        progress.style.width = '0';
-                        setTimeout(() => {
-                            progress.style.width = width;
-                        }, 300);
-                    });
-                }
-            });
-        }, observerOptions);
-
-        // Observe skill categories
-        document.querySelectorAll('.skill-category').forEach(category => {
-            observer.observe(category);
-        });
-
-        // Add fade-in animation to elements when they come into view
-        const fadeElements = document.querySelectorAll('.fade-in');
-        const fadeObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animationPlayState = 'running';
-                    fadeObserver.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.1
-        });
-
-        fadeElements.forEach(element => {
-            element.style.animationPlayState = 'paused';
-            fadeObserver.observe(element);
-        });
-
-        // Initialize
-        updateActiveNavLink();
-    </script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
