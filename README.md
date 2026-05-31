@@ -1,6 +1,6 @@
 # 👨‍💻 Isaac Esteban Haro Torres
 
-## **Ingeniero en Sistemas & Full Stack Developer | DevOps & Automatización | Founder of TST SOLUTIONS**
+## **Magíster en Big Data · Ingeniero en Sistemas de la Información | Full Stack & DevOps | Founder de TST SOLUTIONS**
 
 <div align="center">
 
@@ -179,7 +179,7 @@ Ingeniero en Sistemas con más de 4 años de experiencia diseñando, desarrollan
 | Grado | Institución | Estado |
 |-------|-------------|--------|
 | **Ingeniería en Sistemas de la Información** | Pontificia Universidad Católica del Ecuador (PUCE) | ✅ Completado |
-| **Maestría en Big Data** | Universidad del Pacífico – Universidad de Andorra | 🔄 En curso |
+| **Magíster en Big Data** | Universidad del Pacífico – Universidad de Andorra | ✅ Finalizado |
 | **SCRUM Foundation Professional Certificate** | CertiProf | ✅ Certificado |
 | **Intercambio Académico** | Universidad Católica de Córdoba (UCC), Argentina | ✅ Completado |
 
@@ -370,7 +370,7 @@ Ingeniero en Sistemas con más de 4 años de experiencia diseñando, desarrollan
 | Grado | Institución | Estado |
 |-------|-------------|--------|
 | 🎓 **Ingeniería en Sistemas de la Información** | Pontificia Universidad Católica del Ecuador | ✅ Completado |
-| 📚 **Maestría en Big Data** | Universidad del Pacífico / Universidad de Andorra | 🔄 En curso |
+| 📚 **Magíster en Big Data** | Universidad del Pacífico / Universidad de Andorra | ✅ Finalizado |
 | 📜 **SCRUM Foundation Professional Certificate** | CertiProf | ✅ Certificado |
 | 🌍 **Intercambio Académico** | Universidad Católica de Córdoba (UCC), Argentina | ✅ Completado |
 

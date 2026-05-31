@@ -1560,6 +1560,7 @@ footer p {
     justify-content: center;
     color: var(--light);
     font-size: 1.5rem;
+    text-decoration: none;
     transition: all 0.3s ease;
     border: 2px solid transparent;
 }
@@ -2151,6 +2152,7 @@ footer {
     justify-content: center;
     color: var(--light);
     font-size: 1.2rem;
+    text-decoration: none;
     transition: all 0.3s ease;
     border: 1px solid rgba(99, 102, 241, 0.15);
 }
@@ -2441,6 +2443,70 @@ body {
     .hero {
         min-height: auto;
         padding-top: 6rem;
+    }
+}
+
+/* ==========================================
+   Selector de idioma + controles de nav
+   ========================================== */
+.nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.lang-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.5rem 0.9rem;
+    border-radius: 999px;
+    background: rgba(99, 102, 241, 0.12);
+    border: 1px solid rgba(99, 102, 241, 0.35);
+    color: var(--light);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.lang-switch i {
+    color: var(--primary);
+    font-size: 0.95rem;
+}
+
+.lang-switch:hover {
+    background: var(--gradient-1);
+    border-color: transparent;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.35);
+}
+
+.lang-switch:hover i {
+    color: #fff;
+}
+
+/* Credenciales del hero */
+.hero-creds {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.02rem !important;
+    font-weight: 600;
+    color: var(--accent) !important;
+    margin-bottom: 1.5rem !important;
+    max-width: 100% !important;
+}
+
+.hero-creds i {
+    color: var(--accent);
+}
+
+@media (max-width: 480px) {
+    .hero-creds {
+        font-size: 0.92rem !important;
     }
 }
 

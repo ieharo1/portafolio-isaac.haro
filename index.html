@@ -35,36 +35,41 @@
         <nav>
             <div class="logo">Isaac Haro</div>
             <ul class="nav-links">
-                <li><a href="#inicio" class="active">Inicio</a></li>
+                <li><a href="#inicio" class="active" data-i18n="nav_inicio">Inicio</a></li>
                 <li><a href="#tst" class="nav-tst">TST Solutions</a></li>
                 <li><a href="#stack">Stack</a></li>
-                <li><a href="#experiencia">Experiencia</a></li>
+                <li><a href="#experiencia" data-i18n="nav_experiencia">Experiencia</a></li>
                 <li><a href="#devops">DevOps</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#casos-exito">Casos</a></li>
-                <li><a href="#educacion">Educación</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#habilidades" data-i18n="nav_habilidades">Habilidades</a></li>
+                <li><a href="#casos-exito" data-i18n="nav_casos">Casos</a></li>
+                <li><a href="#educacion" data-i18n="nav_educacion">Educación</a></li>
+                <li><a href="#proyectos" data-i18n="nav_proyectos">Proyectos</a></li>
+                <li><a href="#contacto" data-i18n="nav_contacto">Contacto</a></li>
             </ul>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fas fa-bars"></i>
-            </button>
+            <div class="nav-controls">
+                <button class="lang-switch" id="langSwitch" type="button" aria-label="Change language / Cambiar idioma">
+                    <i class="fas fa-globe"></i><span id="langLabel">EN</span>
+                </button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
         </nav>
     </header>
 
     <!-- Mobile Navigation -->
     <div class="mobile-nav" id="mobileNav">
         <ul class="mobile-nav-links">
-            <li><a href="#inicio" class="active">Inicio</a></li>
+            <li><a href="#inicio" class="active" data-i18n="nav_inicio">Inicio</a></li>
             <li><a href="#tst" class="nav-tst">TST Solutions</a></li>
-            <li><a href="#stack">Stack Tecnológico</a></li>
-            <li><a href="#experiencia">Experiencia</a></li>
+            <li><a href="#stack" data-i18n="nav_stack_full">Stack Tecnológico</a></li>
+            <li><a href="#experiencia" data-i18n="nav_experiencia">Experiencia</a></li>
             <li><a href="#devops">DevOps</a></li>
-            <li><a href="#habilidades">Habilidades</a></li>
-            <li><a href="#casos-exito">Casos</a></li>
-            <li><a href="#educacion">Educación</a></li>
-            <li><a href="#proyectos">Proyectos</a></li>
-            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#habilidades" data-i18n="nav_habilidades">Habilidades</a></li>
+            <li><a href="#casos-exito" data-i18n="nav_casos">Casos</a></li>
+            <li><a href="#educacion" data-i18n="nav_educacion">Educación</a></li>
+            <li><a href="#proyectos" data-i18n="nav_proyectos">Proyectos</a></li>
+            <li><a href="#contacto" data-i18n="nav_contacto">Contacto</a></li>
         </ul>
     </div>
 
@@ -75,14 +80,18 @@
             <div class="hero-text">
                 <a href="#tst" class="founder-badge fade-in stagger-1">
                     <i class="fas fa-rocket"></i>
-                    <span>Co-Fundador &amp; Arquitecto <strong>@ TST Solutions</strong></span>
+                    <span data-i18n="hero_badge">Co-Fundador &amp; Arquitecto <strong>@ TST Solutions</strong></span>
                 </a>
                 <h1 class="fade-in stagger-1">
                     <span class="gradient-text">Isaac Esteban</span><br>
                     Haro Torres
                 </h1>
-                <p class="subtitle fade-in stagger-2">Ingeniero de Software · Full Stack · DevOps &amp; IA</p>
-                <p class="fade-in stagger-3">
+                <p class="subtitle fade-in stagger-2" data-i18n="hero_subtitle">Ingeniero de Software · Full Stack ·
+                    DevOps &amp; IA</p>
+                <p class="hero-creds fade-in stagger-2" data-i18n="hero_creds">
+                    <i class="fas fa-graduation-cap"></i> Magíster en Big Data · Ingeniero en Sistemas de la Información
+                </p>
+                <p class="fade-in stagger-3" data-i18n="hero_intro">
                     +4 años diseñando, construyendo y <strong>operando sistemas empresariales de extremo a
                     extremo</strong>. Backend con Python (Django, FastAPI), PHP (Laravel) y Node.js, automatización de
                     procesos con IA y n8n, e infraestructura en Linux y Windows. Transformo retos de negocio en
@@ -90,7 +99,7 @@
                 </p>
 
                 <div class="highlight-box fade-in stagger-4">
-                    <p>
+                    <p data-i18n="hero_highlight">
                         <strong>Mentalidad automation-first &amp; orientado al negocio</strong> — lidero equipos,
                         integro IA (LLM locales, MCP, OpenCV/YOLO) y entrego con calidad comprobada. Mis referencias
                         avalan la responsabilidad en cada proyecto.
@@ -114,11 +123,11 @@
                 </div>
 
                 <div class="cta-buttons fade-in stagger-5">
-                    <a href="#contacto" class="btn btn-primary">
+                    <a href="#contacto" class="btn btn-primary" data-i18n="hero_btn_contact">
                         <i class="fas fa-envelope"></i>
                         Contáctame
                     </a>
-                    <a href="#experiencia" class="btn btn-secondary">
+                    <a href="#experiencia" class="btn btn-secondary" data-i18n="hero_btn_exp">
                         <i class="fas fa-briefcase"></i>
                         Ver Experiencia
                     </a>
@@ -132,18 +141,18 @@
                     </div>
                     <div class="floating-card card-1">
                         <i class="fas fa-code"></i>
-                        <strong>+4 años</strong>
-                        <p>Experiencia Profesional</p>
+                        <strong data-i18n="card1_strong">+4 años</strong>
+                        <p data-i18n="card1_p">Experiencia Profesional</p>
                     </div>
                     <div class="floating-card card-2">
                         <i class="fas fa-rocket"></i>
                         <strong>TST Solutions</strong>
-                        <p>Co-Fundador &amp; Arquitecto</p>
+                        <p data-i18n="card2_p">Co-Fundador &amp; Arquitecto</p>
                     </div>
                     <div class="floating-card card-3">
                         <i class="fas fa-robot"></i>
-                        <strong>IA + n8n</strong>
-                        <p>Automatización end-to-end</p>
+                        <strong data-i18n="card3_strong">IA + n8n</strong>
+                        <p data-i18n="card3_p">Automatización end-to-end</p>
                     </div>
                 </div>
             </div>
@@ -154,56 +163,59 @@
     <section id="tst" class="tst-band">
         <div class="tst-band-inner">
             <div class="tst-band-head fade-in">
-                <span class="tst-tag"><i class="fas fa-rocket"></i> Mi Startup</span>
+                <span class="tst-tag"><i class="fas fa-rocket"></i> <span data-i18n="tst_tag">Mi Startup</span></span>
                 <h2 class="tst-logo">TST <span>Solutions</span></h2>
-                <p class="tst-claim">“Te Solucionamos Todo” — Transformación digital, plataformas SaaS y ERPs a la
-                    medida.</p>
+                <p class="tst-claim" data-i18n="tst_claim">“Te Solucionamos Todo” — Transformación digital, plataformas
+                    SaaS y ERPs a la medida.</p>
                 <p class="tst-role">
                     <i class="fas fa-user-astronaut"></i>
-                    <strong>Co-Fundador, Arquitecto &amp; Desarrollador Full Stack</strong> · Empresa propia de
-                    base tecnológica.
+                    <span data-i18n="tst_role"><strong>Co-Fundador, Arquitecto &amp; Desarrollador Full Stack</strong> ·
+                        Empresa propia de base tecnológica.</span>
                 </p>
             </div>
 
             <div class="tst-metrics fade-in">
-                <div class="tst-metric"><strong>4+</strong><span>Plataformas en vivo</span></div>
-                <div class="tst-metric"><strong>SaaS</strong><span>Multi-cliente &amp; ERPs</span></div>
-                <div class="tst-metric"><strong>IA + n8n</strong><span>Procesos automatizados</span></div>
-                <div class="tst-metric"><strong>B2B / B2C</strong><span>E-commerce &amp; gestión</span></div>
+                <div class="tst-metric"><strong>4+</strong><span data-i18n="tst_m1">Plataformas en vivo</span></div>
+                <div class="tst-metric"><strong>SaaS</strong><span data-i18n="tst_m2">Multi-cliente &amp; ERPs</span></div>
+                <div class="tst-metric"><strong>IA + n8n</strong><span data-i18n="tst_m3">Procesos automatizados</span>
+                </div>
+                <div class="tst-metric"><strong>B2B / B2C</strong><span data-i18n="tst_m4">E-commerce &amp;
+                        gestión</span></div>
             </div>
 
             <div class="tst-platforms">
                 <a href="https://www.tstsolutionsec.com/" target="_blank" rel="noopener"
                     class="tst-platform fade-in stagger-1">
                     <i class="fas fa-globe"></i>
-                    <h4>Sitio Oficial</h4>
+                    <h4 data-i18n="tst_p1_t">Sitio Oficial</h4>
                     <span>tstsolutionsec.com</span>
                 </a>
                 <a href="https://ecommerce.tstsolutionsec.com/" target="_blank" rel="noopener"
                     class="tst-platform fade-in stagger-2">
                     <i class="fas fa-briefcase"></i>
                     <h4>Ecommerce B2B</h4>
-                    <span>Catálogo mayorista</span>
+                    <span data-i18n="tst_p2_s">Catálogo mayorista</span>
                 </a>
                 <a href="https://tiendaonline.tstsolutionsec.com/" target="_blank" rel="noopener"
                     class="tst-platform fade-in stagger-3">
                     <i class="fas fa-shopping-cart"></i>
-                    <h4>Tienda Online</h4>
+                    <h4 data-i18n="tst_p3_t">Tienda Online</h4>
                     <span>E-commerce demo</span>
                 </a>
                 <a href="https://jonakampos.tstsolutionsec.com/" target="_blank" rel="noopener"
                     class="tst-platform fade-in stagger-4">
                     <i class="fas fa-paw"></i>
                     <h4>Jona Kampos</h4>
-                    <span>Rescate animal</span>
+                    <span data-i18n="tst_p4_s">Rescate animal</span>
                 </a>
             </div>
 
             <div class="tst-cta fade-in">
-                <a href="https://www.tstsolutionsec.com/" target="_blank" rel="noopener" class="btn btn-primary">
+                <a href="https://www.tstsolutionsec.com/" target="_blank" rel="noopener" class="btn btn-primary"
+                    data-i18n="tst_cta1">
                     <i class="fas fa-arrow-up-right-from-square"></i> Conoce TST Solutions
                 </a>
-                <a href="#casos-exito" class="btn btn-secondary">
+                <a href="#casos-exito" class="btn btn-secondary" data-i18n="tst_cta2">
                     <i class="fas fa-diagram-project"></i> Ver casos de éxito
                 </a>
             </div>
@@ -214,8 +226,8 @@
     <section id="stack">
         <div class="section-header">
             <div class="section-number">01</div>
-            <h2><span class="gradient-text">Stack</span> Tecnológico</h2>
-            <p>Tecnologías y herramientas que domino y utilizo diariamente</p>
+            <h2 data-i18n="sec_stack_h2"><span class="gradient-text">Stack</span> Tecnológico</h2>
+            <p data-i18n="sec_stack_p">Tecnologías y herramientas que domino y utilizo diariamente</p>
         </div>
         
         <div class="tech-grid">
@@ -437,8 +449,8 @@
     <section id="experiencia">
         <div class="section-header">
             <div class="section-number">02</div>
-            <h2><span class="gradient-text">Experiencia</span> Laboral</h2>
-            <p>Mi trayectoria profesional y logros destacados</p>
+            <h2 data-i18n="sec_exp_h2"><span class="gradient-text">Experiencia</span> Laboral</h2>
+            <p data-i18n="sec_exp_p">Mi trayectoria profesional y logros destacados</p>
         </div>
         <div class="timeline">
             <!-- Experiencia 1 -->
@@ -446,7 +458,7 @@
                 <div class="experience-card">
                     <div class="experience-header">
                         <div>
-                            <h3 class="experience-title">Analista de Software y Aplicaciones</h3>
+                            <h3 class="experience-title" data-i18n="exp1_title">Analista de Software y Aplicaciones</h3>
                             <p class="experience-company">
                                 <i class="fas fa-building company-logo"></i>
                                 Quifatex S.A. / Intercorp
@@ -454,7 +466,7 @@
                         </div>
                         <span class="experience-period">Sep 2025 - Actualidad</span>
                     </div>
-                    <ul class="experience-list">
+                    <ul class="experience-list" data-i18n="exp1_list">
                         <li><strong>Lidero un equipo de 3 personas</strong> en el área de TI, coordinando desarrollo,
                             priorización del backlog y levantamiento de requerimientos</li>
                         <li>Desarrollo de sistemas internos con Python (Django) y Bootstrap 5 con arquitectura limpia,
@@ -497,7 +509,7 @@
                 <div class="experience-card">
                     <div class="experience-header">
                         <div>
-                            <h3 class="experience-title">Desarrollador Junior</h3>
+                            <h3 class="experience-title" data-i18n="exp2_title">Desarrollador Junior</h3>
                             <p class="experience-company">
                                 <i class="fas fa-university company-logo"></i>
                                 Universidad del Pacífico / Universidad de Andorra
@@ -505,7 +517,7 @@
                         </div>
                         <span class="experience-period">Abr 2024 - Sep 2025</span>
                     </div>
-                    <ul class="experience-list">
+                    <ul class="experience-list" data-i18n="exp2_list">
                         <li>Desarrollo de sistemas internos utilizando PHP, Laravel y Livewire, incluyendo módulos
                             académicos, recursos humanos y contabilidad</li>
                         <li>Gestión y mantenimiento de bases de datos MySQL y MongoDB</li>
@@ -544,7 +556,7 @@
                 <div class="experience-card">
                     <div class="experience-header">
                         <div>
-                            <h3 class="experience-title">Gestor de Marketing Digital y Canales Online</h3>
+                            <h3 class="experience-title" data-i18n="exp3_title">Gestor de Marketing Digital y Canales Online</h3>
                             <p class="experience-company">
                                 <i class="fas fa-chart-line company-logo"></i>
                                 LEGION CNC
@@ -552,7 +564,7 @@
                         </div>
                         <span class="experience-period">Dic 2024 - Actualidad</span>
                     </div>
-                    <ul class="experience-list">
+                    <ul class="experience-list" data-i18n="exp3_list">
                         <li>Creación y edición de contenido audiovisual para la promoción de máquinas CNC</li>
                         <li>Planificación y producción de videos publicitarios orientados a producto y demostración</li>
                         <li>Gestión y administración de perfiles en redes sociales</li>
@@ -572,18 +584,18 @@
             <!-- Experiencia 5 - TST SOLUTIONS -->
             <div class="timeline-item fade-in">
                 <div class="experience-card tst-featured">
-                    <span class="exp-flag"><i class="fas fa-rocket"></i> Mi Startup</span>
+                    <span class="exp-flag"><i class="fas fa-rocket"></i> <span data-i18n="exp_flag">Mi Startup</span></span>
                     <div class="experience-header">
                         <div>
-                            <h3 class="experience-title">Co-Fundador, Arquitecto &amp; Desarrollador Full Stack</h3>
+                            <h3 class="experience-title" data-i18n="exp4_title">Co-Fundador, Arquitecto &amp; Desarrollador Full Stack</h3>
                             <p class="experience-company">
                                 <i class="fas fa-rocket company-logo"></i>
-                                TST Solutions ("Te Solucionamos Todo") · Startup SaaS propia
+                                <span data-i18n="exp4_company">TST Solutions ("Te Solucionamos Todo") · Startup SaaS propia</span>
                             </p>
                         </div>
                         <span class="experience-period">Ene 2026 - Actualidad</span>
                     </div>
-                    <ul class="experience-list">
+                    <ul class="experience-list" data-i18n="exp4_list">
                         <li>Diseño y desarrollo de plataformas SaaS multi-cliente bajo arquitectura modular y escalable</li>
                         <li>Desarrollo backend con Python (Django) y PHP (Laravel), aplicando principios de arquitectura limpia, seguridad y separación por entornos (DEV / QA / PROD)</li>
                         <li>Implementación de frontend moderno con Bootstrap 5, Tailwind y frameworks JS según requerimiento del cliente</li>
@@ -618,7 +630,7 @@
                 <div class="experience-card">
                     <div class="experience-header">
                         <div>
-                            <h3 class="experience-title">Analista de Soporte Técnico</h3>
+                            <h3 class="experience-title" data-i18n="exp5_title">Analista de Soporte Técnico</h3>
                             <p class="experience-company">
                                 <i class="fas fa-headset company-logo"></i>
                                 Puntonet
@@ -626,7 +638,7 @@
                         </div>
                         <span class="experience-period">Jun 2022 - Abr 2024</span>
                     </div>
-                    <ul class="experience-list">
+                    <ul class="experience-list" data-i18n="exp5_list">
                         <li>Gestión de productos y servicios mediante el uso de software empresarial</li>
                         <li>Documentación y administración de información relevante del sistema informático</li>
                         <li>Atención al cliente con enfoque en proactividad y cumplimiento de objetivos</li>
@@ -652,7 +664,7 @@
                 <div class="experience-card">
                     <div class="experience-header">
                         <div>
-                            <h3 class="experience-title">Pasante de Sistemas</h3>
+                            <h3 class="experience-title" data-i18n="exp6_title">Pasante de Sistemas</h3>
                             <p class="experience-company">
                                 <i class="fas fa-headset company-logo"></i>
                                 Puntonet
@@ -660,7 +672,7 @@
                         </div>
                         <span class="experience-period">Dic 2021 - Jun 2022</span>
                     </div>
-                    <ul class="experience-list">
+                    <ul class="experience-list" data-i18n="exp6_list">
                         <li>Gestión de productos y servicios mediante el uso de software empresarial</li>
                         <li>Documentación y administración de información relevante del sistema informático</li>
                         <li>Atención al cliente con enfoque en proactividad y cumplimiento de objetivos</li>
@@ -689,16 +701,16 @@
     <section id="devops">
         <div class="section-header">
             <div class="section-number">03</div>
-            <h2><span class="gradient-text">DevOps</span> & Automatización</h2>
-            <p>Arquitectura de sistemas, despliegue continuo y automatización</p>
+            <h2 data-i18n="sec_devops_h2"><span class="gradient-text">DevOps</span> & Automatización</h2>
+            <p data-i18n="sec_devops_p">Arquitectura de sistemas, despliegue continuo y automatización</p>
         </div>
         <div class="devops-grid">
             <div class="devops-card fade-in stagger-1">
                 <div class="devops-icon">
                     <i class="fas fa-server"></i>
                 </div>
-                <h3>Infraestructura & Servidores</h3>
-                <ul class="devops-list">
+                <h3 data-i18n="devops1_h3">Infraestructura & Servidores</h3>
+                <ul class="devops-list" data-i18n="devops1_list">
                     <li>Administración de servidores Linux y Windows (físicos y virtualizados)</li>
                     <li>Configuración de Nginx, Apache, IIS con HTTP/2 y SSL</li>
                     <li>Gestión de redes corporativas (DNS, VLANs, FTP)</li>
@@ -712,8 +724,8 @@
                 <div class="devops-icon">
                     <i class="fas fa-robot"></i>
                 </div>
-                <h3>Automatización & CI/CD</h3>
-                <ul class="devops-list">
+                <h3 data-i18n="devops2_h3">Automatización & CI/CD</h3>
+                <ul class="devops-list" data-i18n="devops2_list">
                     <li>Automatización de procesos empresariales con n8n</li>
                     <li>Integración de APIs REST, webhooks, IA y servicios externos</li>
                     <li>Procesamiento asíncrono con Celery + Redis (workers, beat, monitoreo)</li>
@@ -727,8 +739,8 @@
                 <div class="devops-icon">
                     <i class="fas fa-cogs"></i>
                 </div>
-                <h3>Contenerización & Orquestación</h3>
-                <ul class="devops-list">
+                <h3 data-i18n="devops3_h3">Contenerización & Orquestación</h3>
+                <ul class="devops-list" data-i18n="devops3_list">
                     <li>Contenerización con Docker y Docker Compose</li>
                     <li>Despliegue de aplicaciones en entornos productivos</li>
                     <li>Configuración de servicios systemd para aplicaciones</li>
@@ -742,8 +754,8 @@
                 <div class="devops-icon">
                     <i class="fas fa-database"></i>
                 </div>
-                <h3>Bases de Datos & Monitoreo</h3>
-                <ul class="devops-list">
+                <h3 data-i18n="devops4_h3">Bases de Datos & Monitoreo</h3>
+                <ul class="devops-list" data-i18n="devops4_list">
                     <li>Gestión avanzada de bases de datos SQL y NoSQL</li>
                     <li>Optimización de consultas y mantenimiento de bases de datos</li>
                     <li>Monitoreo de logs y rendimiento de aplicaciones</li>
@@ -759,13 +771,13 @@
     <section id="habilidades">
         <div class="section-header">
             <div class="section-number">04</div>
-            <h2><span class="gradient-text">Habilidades</span> Técnicas</h2>
-            <p>Competencias técnicas y profesionales</p>
+            <h2 data-i18n="sec_skills_h2"><span class="gradient-text">Habilidades</span> Técnicas</h2>
+            <p data-i18n="sec_skills_p">Competencias técnicas y profesionales</p>
         </div>
 
         <div class="skills-grid">
             <div class="skill-category fade-in stagger-1">
-                <h3><i class="fas fa-code"></i> Desarrollo & Backend</h3>
+                <h3 data-i18n="skill1_h3"><i class="fas fa-code"></i> Desarrollo & Backend</h3>
                 <div class="skill-item">
                     <div class="skill-header">
                         <span class="skill-name">Python / Django</span>
@@ -795,7 +807,7 @@
                 </div>
                 <div class="skill-item">
                     <div class="skill-header">
-                        <span class="skill-name">Arquitectura de Software</span>
+                        <span class="skill-name" data-i18n="skill_arch">Arquitectura de Software</span>
                         <span class="skill-level">80%</span>
                     </div>
                     <div class="skill-bar">
@@ -805,7 +817,7 @@
             </div>
 
             <div class="skill-category fade-in stagger-2">
-                <h3><i class="fas fa-paint-brush"></i> Frontend & UI</h3>
+                <h3 data-i18n="skill2_h3"><i class="fas fa-paint-brush"></i> Frontend & UI</h3>
                 <div class="skill-item">
                     <div class="skill-header">
                         <span class="skill-name">JavaScript</span>
@@ -845,7 +857,7 @@
             </div>
 
             <div class="skill-category fade-in stagger-3">
-                <h3><i class="fas fa-network-wired"></i> Infraestructura & DevOps</h3>
+                <h3 data-i18n="skill3_h3"><i class="fas fa-network-wired"></i> Infraestructura & DevOps</h3>
                 <div class="skill-item">
                     <div class="skill-header">
                         <span class="skill-name">Linux Administration</span>
@@ -885,7 +897,7 @@
             </div>
 
             <div class="skill-category fade-in stagger-4">
-                <h3><i class="fas fa-database"></i> Bases de Datos & Análisis</h3>
+                <h3 data-i18n="skill4_h3"><i class="fas fa-database"></i> Bases de Datos & Análisis</h3>
                 <div class="skill-item">
                     <div class="skill-header">
                         <span class="skill-name">SQL Server / MySQL</span>
@@ -930,8 +942,8 @@
     <section id="casos-exito">
         <div class="section-header">
             <div class="section-number">05</div>
-            <h2><span class="gradient-text">Casos de Éxito</span> TST Solutions</h2>
-            <p>Plataformas en producción desarrolladas con tecnologías modernas</p>
+            <h2 data-i18n="sec_casos_h2"><span class="gradient-text">Casos de Éxito</span> TST Solutions</h2>
+            <p data-i18n="sec_casos_p">Plataformas en producción desarrolladas con tecnologías modernas</p>
         </div>
 
         <div class="casos-grid">
@@ -1005,8 +1017,8 @@
     <section id="educacion">
         <div class="section-header">
             <div class="section-number">06</div>
-            <h2><span class="gradient-text">Educación</span> & Certificaciones</h2>
-            <p>Formación académica y certificaciones profesionales</p>
+            <h2 data-i18n="sec_edu_h2"><span class="gradient-text">Educación</span> & Certificaciones</h2>
+            <p data-i18n="sec_edu_p">Formación académica y certificaciones profesionales</p>
         </div>
 
         <div class="education-grid">
@@ -1072,8 +1084,8 @@
     <section id="proyectos">
         <div class="section-header">
             <div class="section-number">07</div>
-            <h2><span class="gradient-text">Proyectos</span> Destacados</h2>
-            <p>Algunos de mis proyectos personales y aplicaciones desarrolladas</p>
+            <h2 data-i18n="sec_proy_h2"><span class="gradient-text">Proyectos</span> Destacados</h2>
+            <p data-i18n="sec_proy_p">Algunos de mis proyectos personales y aplicaciones desarrolladas</p>
         </div>
         
         <div class="projects-section">
@@ -1511,8 +1523,8 @@
     <section id="contacto">
         <div class="section-header">
             <div class="section-number">08</div>
-            <h2><span class="gradient-text">Contacto</span></h2>
-            <p>¿Hablamos? Estoy abierto a oportunidades profesionales</p>
+            <h2 data-i18n="sec_contacto_h2"><span class="gradient-text">Contacto</span></h2>
+            <p data-i18n="sec_contacto_p">¿Hablamos? Estoy abierto a oportunidades profesionales</p>
         </div>
 
         <div class="contact-grid">
@@ -1646,6 +1658,7 @@
     </div>
 
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/i18n.js"></script>
 </body>
 
 </html>
