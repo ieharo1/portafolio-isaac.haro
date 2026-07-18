@@ -20,7 +20,7 @@
             nav_stack_full: `Tech Stack`,
 
             // Hero
-            hero_badge: `Co-Founder &amp; Architect <strong>@ TST Solutions</strong>`,
+            hero_badge: `Co-Founder &amp; CTO <strong>@ TST Solutions</strong>`,
             hero_subtitle: `Software Engineer · Full Stack · DevOps &amp; AI`,
             hero_creds: `<i class="fas fa-graduation-cap"></i> Master's Degree in Big Data · Information Systems Engineer`,
             hero_intro: `4+ years designing, building and <strong>operating end-to-end enterprise systems</strong>. Backend with Python (Django, FastAPI), PHP (Laravel) and Node.js, AI- and n8n-powered automation, and infrastructure on Linux and Windows. I turn business challenges into scalable solutions that cut costs and create value.`,
@@ -29,14 +29,14 @@
             hero_btn_exp: `<i class="fas fa-briefcase"></i> View experience`,
             card1_strong: `4+ years`,
             card1_p: `Professional Experience`,
-            card2_p: `Co-Founder &amp; Architect`,
+            card2_p: `Co-Founder &amp; CTO`,
             card3_strong: `AI + n8n`,
             card3_p: `End-to-end automation`,
 
             // TST band
             tst_tag: `My Startup`,
             tst_claim: `“We Solve Everything for You” — Digital transformation, SaaS platforms and tailor-made ERPs.`,
-            tst_role: `<strong>Co-Founder, Architect &amp; Full Stack Developer</strong> · My own technology-based company.`,
+            tst_role: `<strong>Co-Founder &amp; Chief Technology Officer (CTO)</strong> · My own technology-based company.`,
             tst_m1: `Live platforms`,
             tst_m2: `Multi-tenant &amp; ERPs`,
             tst_m3: `Automated processes`,
@@ -67,14 +67,24 @@
             sec_contacto_p: `Shall we talk? I'm open to professional opportunities`,
 
             // Experience
+            expsnob_title: `Innovation &amp; AI Development Project Coordinator`,
             exp1_title: `Software &amp; Applications Analyst`,
             exp2_title: `Junior Developer`,
-            exp3_title: `Digital Marketing &amp; Online Channels Manager`,
-            exp4_title: `Co-Founder, Architect &amp; Full Stack Developer`,
-            exp4_company: `TST Solutions ("We Solve Everything for You") · My own SaaS startup`,
+            exp3_title: `Digital Marketing Manager &amp; Web Developer`,
+            exp4_title: `Chief Technology Officer (CTO)`,
+            exp4_company: `TST Solutions ("We Solve Everything for You") · Co-Founder · My own SaaS startup`,
+            exp4b_title: `Software Architect &amp; Full Stack Developer`,
+            exp4b_company: `TST Solutions · Freelance`,
             exp_flag: `My Startup`,
             exp5_title: `Technical Support Analyst`,
             exp6_title: `Systems Intern`,
+
+            expsnob_list: `
+                <li>Coordination of <strong>innovation projects and AI-based solution development</strong> for the food industry</li>
+                <li>Design and implementation of AI automations and integrations (n8n, APIs, LLMs) to optimize enterprise processes</li>
+                <li>Leadership of <strong>digital transformation</strong> initiatives and adoption of new technologies across the organization</li>
+                <li>End-to-end project lifecycle management: requirements gathering, planning, execution and results tracking</li>
+                <li>Bridging business and technology areas to turn operational needs into scalable solutions</li>`,
 
             exp1_list: `
                 <li><strong>I lead a 3-person team</strong> in IT, coordinating development, backlog prioritization and requirements gathering</li>
@@ -89,7 +99,11 @@
                 <li>SQL Server and PostgreSQL administration with automated backups; Windows/Linux servers and Active Directory</li>`,
 
             exp2_list: `
-                <li>Internal systems with PHP, Laravel and Livewire, including academic, HR and accounting modules</li>
+                <li><strong>End-to-end development of the institution's academic module</strong>: grades, scoring and student records, with complete academic processes and workflows</li>
+                <li>Development of the <strong>faculty, deans and directors</strong> module, including academic ranking (escalafón) management</li>
+                <li><strong>Creation and update of the student module</strong> and the institutional <strong>events module</strong></li>
+                <li>Development of the <strong>HR module with electronic time tracking</strong> and integrations with accounting and the university's other modules</li>
+                <li>Internal systems with PHP, Laravel and Livewire, integrating academic, HR and accounting modules</li>
                 <li>Management and maintenance of MySQL and MongoDB databases</li>
                 <li>Administration and support of multiple academic and administrative systems</li>
                 <li>Implementation and integration of new academic platforms: DSpace, Koha and OJS</li>
@@ -108,22 +122,31 @@
                 <li>Management and administration of social media profiles</li>
                 <li>Thumbnail design and optimized titles and descriptions</li>
                 <li>Publishing and distribution of content across multiple digital platforms</li>
-                <li>Basic performance metrics analysis (reach, engagement and retention)</li>`,
+                <li>Basic performance metrics analysis (reach, engagement and retention)</li>
+                <li>Design and development of the <strong>corporate website (legioncnc.com)</strong> and SaaS platforms for the CNC machine company</li>
+                <li>Backend with Django / Laravel and a modern frontend, with industrial catalog and complete branding</li>`,
 
             exp4_list: `
-                <li>Design and development of multi-tenant SaaS platforms with modular, scalable architecture</li>
-                <li>Backend development with Python (Django) and PHP (Laravel), applying clean architecture, security and environment separation (DEV / QA / PROD)</li>
-                <li>Modern frontend with Bootstrap 5, Tailwind and JS frameworks per client requirement</li>
-                <li>Design and optimization of SQL Server and MySQL databases for production environments</li>
-                <li>Integration of REST APIs, webhooks and external services for business process automation</li>
-                <li>Automation of operational workflows with n8n and async processing with Celery + Redis</li>
-                <li>Infrastructure on Linux servers with Nginx + Gunicorn, SSL and secure per-domain configuration</li>
-                <li>Management of private client repositories, version control with Git and professional branching strategies</li>
-                <li>Containerization with Docker and Docker Compose for reproducible deployments</li>
-                <li>Configuration of domains, DNS, VPS and cloud environments</li>
-                <li>Monitoring, logging and error handling in production</li>
-                <li>Technical documentation of architecture, endpoints and processes for clients</li>
-                <li>Post-deployment support and evolutionary improvements on live systems</li>`,
+                <li><strong>Responsible for the technology strategy</strong>, software architecture and digital innovation for scalable enterprise solutions</li>
+                <li>Definition of enterprise architecture and the <strong>digital product roadmap</strong> (SaaS, ERP, CRM, web and mobile apps)</li>
+                <li>Technical direction of Full Stack projects, ensuring quality, security, scalability and maintainability</li>
+                <li>Design of multi-tenant SaaS, ERP and CRM platforms under modular, scalable architectures</li>
+                <li>Implementation of AI automations with n8n, REST APIs, Webhooks, Celery and Redis to optimize business processes</li>
+                <li>Oversight of infrastructure, CI/CD, Docker, Kubernetes, Nginx, Gunicorn and DEV, QA and PROD environments</li>
+                <li>Integration with SAP, Kommo CRM and third-party services to strengthen enterprise interoperability</li>
+                <li>Development with Python (Django), PHP (Laravel), Node.js (Express), React, Vue, Bootstrap 5, Tailwind CSS and Flutter</li>
+                <li>Definition of development standards, best practices, code review and technology governance</li>
+                <li>End-to-end software lifecycle management, from requirements analysis to production and continuous improvement</li>
+                <li><strong>Highlighted projects:</strong> multi-tenant e-commerce and online store SaaS, custom ERP/CRM and inventory systems, Flutter mobile apps and enterprise AI + n8n automations</li>`,
+
+            exp4b_list: `
+                <li>Design and development of <strong>multi-tenant SaaS platforms and ERPs</strong> under modular, scalable architecture, with AI- and n8n-powered process automation to cut errors and boost productivity</li>
+                <li>Backend with Python (Django), PHP (Laravel) and Node.js (Express) with clean architecture and DEV / QA / PROD environment separation</li>
+                <li>Modern frontend with Bootstrap 5, Tailwind, React and Vue</li>
+                <li>Production projects: <strong>Online Store</strong> (tiendaonline.tstsolutionsec.com), <strong>enterprise E-commerce</strong> (ecommerce.tstsolutionsec.com) and <strong>Legion CNC</strong> (legioncnc.com)</li>
+                <li>Integration of REST APIs, webhooks and external services; automation with n8n and Celery + Redis</li>
+                <li>Docker / Kubernetes containerization; Nginx + Gunicorn + SSL infrastructure per domain</li>
+                <li>Portfolio: Full Stack inventory system, fitness mobile app (Flutter), appointment-management SaaS and CRM integration (Kommo)</li>`,
 
             exp5_list: `
                 <li>Management of products and services through enterprise software</li>
@@ -277,10 +300,12 @@
         "Básico": "Basic",
 
         // Experience periods
-        "Sep 2025 - Actualidad": "Sep 2025 - Present",
+        "Jul 2026 - Actualidad": "Jul 2026 - Present",
+        "Sep 2025 - Jul 2026": "Sep 2025 - Jul 2026",
         "Abr 2024 - Sep 2025": "Apr 2024 - Sep 2025",
         "Dic 2024 - Actualidad": "Dec 2024 - Present",
         "Ene 2026 - Actualidad": "Jan 2026 - Present",
+        "Ene 2026 - Jun 2026": "Jan 2026 - Jun 2026",
         "Jun 2022 - Abr 2024": "Jun 2022 - Apr 2024",
         "Dic 2021 - Jun 2022": "Dec 2021 - Jun 2022",
 
@@ -296,7 +321,7 @@
         "Sitio oficial": "Official site",
         "Tienda Online": "Online Store",
         'Mi startup — "Te Solucionamos Todo". Software a la medida, SaaS y automatización con IA.': 'My startup — "We Solve Everything for You". Custom software, SaaS and AI automation.',
-        "· Co-Fundador & Arquitecto de TST Solutions": "· Co-Founder & Architect of TST Solutions",
+        "· Co-Fundador & CTO de TST Solutions": "· Co-Founder & CTO of TST Solutions",
         "© 2026 Isaac Haro · Hecho con HTML5, CSS3 & JavaScript · Todos los derechos reservados": "© 2026 Isaac Haro · Built with HTML5, CSS3 & JavaScript · All rights reserved"
     };
 
